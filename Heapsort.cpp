@@ -40,21 +40,21 @@ void printaheap(int arr[], int n)
 
 void heapify(int arr[], int n, int i)
 {
-    int largest = i;
+    int maior = i;
     int l = 2 * i + 1;
     int r = 2 * i + 2;
 
-    if (l < n && arr[l] > arr[largest])
-        largest = l;
+    if (l < n && arr[l] > arr[maior])
+        maior = l;
 
-    if (r < n && arr[r] > arr[largest])
-        largest = r;
+    if (r < n && arr[r] > arr[maior])
+        maior = r;
 
-    if (largest != i)
+    if (maior != i)
     {
-        swap(arr[i], arr[largest]);
+        swap(arr[i], arr[maior]);
 
-        heapify(arr, n, largest);
+        heapify(arr, n, maior);
     }
 }
 
